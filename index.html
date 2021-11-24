@@ -1,6 +1,8 @@
+
 <div id="container">
   <!-- populated by JS-->
 </div>
+<button onclick="renderTopEmployees(boston, container)">This section is for people who make 200k+</button>
 <script src="./boston.js"></script>
 <script>
   function renderPosts(boston, container) {
@@ -31,7 +33,7 @@ function renderTopSalaries(boston, container) {
       '</h3>';
   }
 
-  container.innerHTML = '<ul id = "topSalaries">' + html + '</ul>';
+  container.innerHTML = '<ul id = "topSalaries">' + '<h1> Top five ballers section </h1>'  + html + '</ul>';
 }
 
 function renderTopEmployees(boston, container) {
@@ -51,12 +53,12 @@ function renderTopEmployees(boston, container) {
       '</h3>' + '<h4> This is a big baller who makes more than 200k </h4>';
   }
 
-  container.innerHTML += '<ul id = "topEmployees">' + html + '</ul>';
+  container.innerHTML += '<ul id = "topEmployees">'  + html + '</ul>';
   
 }
 
 renderTopSalaries(boston, document.getElementById('container')); 
-renderTopEmployees(boston, document.getElementById('container')); 
+// renderTopEmployees(boston, document.getElementById('container')); 
 // renderPosts(boston, document.getElementById('container')); 
  
 
